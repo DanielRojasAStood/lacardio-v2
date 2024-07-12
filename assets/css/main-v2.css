@@ -5051,6 +5051,7 @@ p {
 
 .seccionBannerPrincipal__title .heading--64 {
   margin-bottom: 18px;
+  font-weight: 400;
 }
 
 .seccionBannerPrincipal__title .heading--18 {
@@ -5223,6 +5224,7 @@ p {
   display: inline-block;
   padding-bottom: 21px;
   margin-bottom: 18px;
+  font-weight: 300;
 }
 
 .seccionNumerada__elemento .number:before {
