@@ -41,6 +41,7 @@ $mostrar_profesionales_urg = get_field("mostrar_profesionales_urg");
 $grupo_profesionales_urg = get_field('grupo_profesionales_urg');
 set_query_var('grupo_profesionales_urg', $grupo_profesionales_urg);
 ?>
+
 <!-- CONTENIDO -->
 <main>
     <?php if($mostrar_banner_principal) : ?>
