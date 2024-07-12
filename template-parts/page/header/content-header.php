@@ -7,13 +7,13 @@
 
 <div class="customHeaderTop">
 	<div class="customHeaderTop__wrapper">
-	<div>
-	<a href="https://www.elempleo.com/co/sitio-empresarial/cardio-infantil" target="_blank" title="Trabaja con nosotros">Trabaja con nosotros</a>
-	<a href="https://www.lacardio.org/ley-de-transparencia/" target="_blank" title="Ley de transparencia">Ley de transparencia</a>
-	</div>
-	<div>
-		<a href="tel:601756 3426" target="_blank" title="Línea de atención">Línea de atención: (601) 756 3426</a>
-    </div>
+        <div>
+            <a href="https://www.elempleo.com/co/sitio-empresarial/cardio-infantil" target="_blank" title="Trabaja con nosotros">Trabaja con nosotros</a>
+            <a href="https://www.lacardio.org/ley-de-transparencia/" target="_blank" title="Ley de transparencia">Ley de transparencia</a>
+        </div>
+        <div>
+            <a href="tel:601756 3426" target="_blank" title="Línea de atención">Línea de atención: (601) 756 3426</a>
+        </div>
     </div>	
 </div>
 <header class="customHeader">
