@@ -27,7 +27,7 @@ $imagen_id           = !empty($grupo_contenido_extenso["imagen"]['ID']) ? $grupo
             </div>
             <div class="seccionContenidoExtenso__info">
                 <?php if($descripcion) :?>
-                    <p class="heading--18 color--002D72">
+                    <p class="heading--18 color--263956">
                         <?php echo $descripcion; ?>
                     </p>
                 <?php endif;?>
@@ -40,7 +40,7 @@ $imagen_id           = !empty($grupo_contenido_extenso["imagen"]['ID']) ? $grupo
         </div>
         <div>
             <?php if($segunda_descripcion) :?>
-                <p class="heading--18 color--002D72">
+                <p class="heading--18 color--263956">
                     <?php echo $segunda_descripcion; ?>
                 </p>
             <?php endif;?>
