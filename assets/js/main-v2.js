@@ -420,7 +420,6 @@ jQuery(document).ready(function ($) {
 
   setEqualHeightNoticias();
 
-
   $slickNoticias = $(".slickProfesionalesUrg");
   slickNoticiasSettings = {
     slidesToShow: 4,
@@ -448,6 +447,55 @@ jQuery(document).ready(function ($) {
   };
   $slickNoticias.slick(slickNoticiasSettings);
 
+  $(".tab-links a").on("click", function (e) {
+    var currentAttrValue = $(this).attr("href");
 
+    $(".tab").removeClass("active");
+    $(currentAttrValue).addClass("active");
 
+    $(".tab-links li").removeClass("active");
+    $(this).parent("li").addClass("active");
+    $('.slickMultimedia').slick('setPosition');
+    e.preventDefault();
+  });
+
+  var $slickMultimedia = $(".slickMultimedia");
+
+  // Configuración inicial del carousel
+  var slickMultimediaSettings = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    infinite: false,
+    adaptiveHeight: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '20px',
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 9999,
+        settings: "unslick",
+      },
+    ],
+  };
+
+  function initSlick() {
+    if (window.innerWidth < 1024) {
+      $slickMultimedia.slick(slickMultimediaSettings);
+    } else {
+      $slickMultimedia.slick("unslick"); 
+    }
+  }
+
+  initSlick();
+  $(window).on("resize", function () {
+    initSlick();
+  });
 });
