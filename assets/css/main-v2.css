@@ -5707,17 +5707,13 @@ p {
   padding: 80px 0 0;
 }
 
-.seccionTabs__multimedia .wrapper{
-  padding: 0
-}
-
 .seccionTabs__multimedia .heading--48 {
   margin-bottom: 40px;
 }
 
 .seccionTabs__video {
   text-decoration: none;
-  padding: 20px 10px;
+  padding: 20px;
 }
 
 .seccionTabs__card {
@@ -5752,10 +5748,6 @@ p {
 }
 
 @media only screen and (min-width: 1024px) {
-  .seccionTabs__multimedia .wrapper{
-    padding: 0 24px
-  }
-
   .seccionTabs__videos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
