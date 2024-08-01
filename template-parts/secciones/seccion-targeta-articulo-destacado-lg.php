@@ -21,10 +21,10 @@
             </div>
             <article class="seccionArticulos__articulo">
                 <a href="/<?php echo $articulo_destacado_url; ?>" class="seccionArticulos__link" title="<?php echo $nombre_doctor?>">
-                    <?php if(!empty($foto_doctor_home)) : ?>
-                        <img class="seccionArticulos__img" width="721" height="269" src="<?php echo $foto_doctor_grande?>" alt="<?php echo $nombre_doctor . ' ' . $apellido_doctor . ' - ' . $sitename; ?>" title="<?php echo $nombre_doctor . ' ' . $apellido_doctor?>">
-                    <?php else : ?>
+                    <?php if(empty($foto_doctor_grande)) : ?>
                         <img class="seccionArticulos__img" width="721" height="269" src="<?php echo IMG_BASE . 'placeholder-image.webp'; ?>" alt="<?php echo $nombre_doctor . ' ' . $apellido_doctor . ' - ' . $sitename; ?>" title="<?php echo $nombre_doctor . ' ' . $apellido_doctor?>">
+                        <?php else : ?>
+                        <img class="seccionArticulos__img" width="721" height="269" src="<?php echo $foto_doctor_grande?>" alt="<?php echo $nombre_doctor . ' ' . $apellido_doctor . ' - ' . $sitename; ?>" title="<?php echo $nombre_doctor . ' ' . $apellido_doctor?>">
                     <?php endif ?>
                     <div class="seccionArticulos__info">
                         <header>

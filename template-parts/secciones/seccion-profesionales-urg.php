@@ -1,17 +1,24 @@
 <?php
-$args = array(
-    'post_type' => 'profesional-de-urgen',
-    'posts_per_page' => -1,
-);
-
-$query_profesionales = new WP_Query($args);
-
 $sitename                   = esc_html(get_bloginfo('name'));
 $grupo_profesionales_urg    = get_query_var('grupo_profesionales_urg');
 
-$subtitulo = !empty($grupo_profesionales_urg["subtitulo"]) ? $grupo_profesionales_urg["subtitulo"] : '';
-$titulo    = !empty($grupo_profesionales_urg["titulo"]) ? $grupo_profesionales_urg["titulo"] : '';
-$fondo     = !empty($grupo_profesionales_urg["fondo"]) ? $grupo_profesionales_urg["fondo"] : '';
+$subtitulo          = !empty($grupo_profesionales_urg["subtitulo"]) ? $grupo_profesionales_urg["subtitulo"] : '';
+$titulo             = !empty($grupo_profesionales_urg["titulo"]) ? $grupo_profesionales_urg["titulo"] : '';
+$fondo              = !empty($grupo_profesionales_urg["fondo"]) ? $grupo_profesionales_urg["fondo"] : '';
+
+$especialistas      = !empty($grupo_profesionales_urg["especialistas"]) ? $grupo_profesionales_urg["especialistas"] : '';
+$especialistas_ids  = array_map(function($post) {
+    return $post->ID;
+}, $especialistas);
+
+$args = array(
+    'post_type' => 'especialistas',
+    'posts_per_page' => 8,
+    'post__in' => $especialistas_ids,
+    'orderby' => 'post__in' 
+);
+
+$query_profesionales = new WP_Query($args);
 ?>
 
 <section class="seccionProfesionalesUrg">
@@ -34,7 +41,9 @@ $fondo     = !empty($grupo_profesionales_urg["fondo"]) ? $grupo_profesionales_ur
         <?php if ($query_profesionales->have_posts()) : ?>
             <div class="seccionProfesionalesUrg__container">
                 <div class="slickProfesionalesUrg slickPersonalizado">
-                    <?php while ($query_profesionales->have_posts()) : $query_profesionales->the_post(); ?>
+                    <?php while ($query_profesionales->have_posts()) : $query_profesionales->the_post(); 
+                        $especialidad = get_field('specialties_doctor');
+                    ?>
                         <a href="<?php the_permalink(); ?>" class="">
                             <div class="seccionProfesionalesUrg__card">
                                 <div class="seccionProfesionalesUrg__img">
@@ -47,9 +56,11 @@ $fondo     = !empty($grupo_profesionales_urg["fondo"]) ? $grupo_profesionales_ur
                                 </div>
                                 <div class="seccionProfesionalesUrg__info">
                                     <h3 class="heading--24"><?php the_title(); ?></h3>
-                                    <div class="heading--18">
-                                        <?php the_excerpt(); ?>
-                                    </div>
+                                    <?php if($especialidad) : ?>
+                                    <p class="heading--18 color--677283">
+                                        <?php echo $especialidad; ?>
+                                    </p>
+                                    <?php endif; ?>
                                     <span class="vermas--rojo">
                                         <span class="hover hover--rojo">
                                             Ver perfil

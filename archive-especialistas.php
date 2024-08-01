@@ -79,7 +79,7 @@ endif;
     <div class="especialistasgen__int">
         <div class="especialistasgen__filtro">
             <div class="especialistasgen__filtro__int">
-                <form action="" name="filtro" class="filtro">
+                <form id="filtro-form" name="filtro" class="filtro">
                     <input type="hidden" name="filtro_tipo" value="especialistas">
                     <div class="especialistasgen__filtro__bar">
                         <p>Limita tu búsqueda</p>
@@ -107,7 +107,7 @@ endif;
                             </div>
                         </div>
                         <div class="especialistasgen__filtro__content__ind">
-                            <h4>Por nombre</h4>
+                            <h4>Por apellido</h4>
                             <div class="mb-3">
                                 <div class="filtro_apellido">
                                     <input type="hidden" name="letra" class="filtro_valores filtro_letra" value="">
@@ -117,6 +117,7 @@ endif;
                         </div>
                     </div>
                     <div class="especialistasgen__filtro__btn">
+                        <button style="display:none;" type="submit">Buscar</button>
                         <a href="/especialistas/">Restablecer todos los filtros</a>
                     </div>
                 </form>
@@ -152,9 +153,56 @@ endif;
         </div>
     </div>
 </main>
-<?php  get_footer(); ?>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('filtro-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+
+        const formData = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '<?php echo admin_url('admin-ajax.php'); ?>');
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                updateResults(response);
+            } else {
+                console.error('Error en la solicitud AJAX');
+            }
+        };
+        xhr.send(formData);
+    });
+
+    function updateResults(data) {
+        const resultadosContainer = document.querySelector('.especialistasgen__resultados');
+        resultadosContainer.innerHTML = ''; // Clear current results
+
+        data.publicaciones.forEach(function(publicacion) {
+            const div = document.createElement('div');
+            div.className = 'especialistaindv';
+            div.innerHTML = `
+                <div class="especialistaindv__int ${publicacion.clase}">
+                    ${publicacion.clase != 'sin_imagen' ? `<div class="especialistaindv__foto">
+                        <a href="${publicacion.enlace}">
+                            <img src="${publicacion.imagen}" alt="${publicacion.titulo}">
+                        </a>
+                    </div>` : ''}
+                    <div class="especialistaindv__contenido">
+                        <h2><a href="${publicacion.enlace}">${publicacion.nombre_completo}</a></h2>
+                        <p>${publicacion.descripcion}</p>
+                        <h3>ESPECIALIDADES Y SUBESPECIALIDADES</h3>
+                        <p>${publicacion.especialidades_y_sub}</p>
+                    </div>
+                </div>
+            `;
+            resultadosContainer.appendChild(div);
+        });
+    }
+});
+</script>
 
 
-
+<?php get_footer(); ?>

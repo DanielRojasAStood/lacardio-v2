@@ -2085,3 +2085,61 @@ require_once($incPath . 'functions-custom.php');
 require_once($incPath . 'custom-postype.php');
 
 
+// ESPECIALISTAS
+// 
+// 
+add_action('wp_ajax_nopriv_filtrar_especialistas', 'filtrar_especialistas');
+add_action('wp_ajax_filtrar_especialistas', 'filtrar_especialistas');
+
+function filtrar_especialistas() {
+    $servicio = isset($_POST['servicio']) ? sanitize_text_field($_POST['servicio']) : '';
+
+    $args = array(
+        'post_type' => 'especialistas',
+        'posts_per_page' => 12,
+        'paged' => (isset($_POST['paged']) ? intval($_POST['paged']) : 1),
+        'meta_key' => 'apellido',
+        'orderby' => 'meta_value',
+        'order' => 'ASC',
+        'meta_query' => array(
+            array(
+                'key' => 'specialties_doctor',
+                'value' => $servicio,
+                'compare' => 'LIKE'
+            )
+        )
+    );
+
+    $query = new WP_Query($args);
+    $publicaciones = array();
+
+    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+        $id_publicacion = get_the_ID();
+        $imagen = get_field('image_doctor', $id_publicacion)["url"];
+        $fecha_del_evento = get_field('fecha_del_evento', $id_publicacion);
+
+        $nombre = get_field('nombre', $id_publicacion);
+        $apellido = get_field('apellido', $id_publicacion);
+        $especialidades_y_sub = get_field('specialties_doctor', $id_publicacion);
+        $nombre_completo = (($nombre != "" && $apellido != "")) ? $nombre . " " . $apellido : get_the_title();
+        $clase = (isset($imagen) && !empty($imagen)) ? '' : 'sin_imagen';
+
+        $publicaciones[] = array(
+            "titulo" => get_the_title(),
+            "slug" => $post->post_name,
+            "nombre_completo" => $nombre_completo,
+            "descripcion" => get_the_excerpt(),
+            "fecha_del_evento" => $fecha_del_evento,
+            "enlace" => get_the_permalink($id_publicacion),
+            "imagen" => $imagen,
+            "especialidades_y_sub" => $especialidades_y_sub,
+            "clase" => $clase,
+            "fecha" => get_the_date("d M"),
+        );
+    endwhile; wp_reset_postdata(); endif;
+
+    wp_send_json(array(
+        'publicaciones' => $publicaciones
+    ));
+}
+

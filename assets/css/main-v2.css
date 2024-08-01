@@ -917,7 +917,7 @@ body.is-active {
 
 .customFooter__wrapper {
   position: relative;
-  max-width: 1180px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -1056,7 +1056,7 @@ body.is-active {
 @media only screen and (min-width: 1024px) {
   .customFooter__icon {
     top: -80px;
-    right: 0;
+    right: 24px;
     width: 67px;
   }
 
@@ -1311,9 +1311,9 @@ img {
   align-items: center;
   justify-content: center;
   column-gap: 6px;
-  max-width: max-content;
+  max-width: 100%;
   height: 56px;
-  padding: 0 37px;
+  padding: 0 12px;
   font-size: var(--18);
   font-style: normal;
   font-weight: 400;
@@ -1364,6 +1364,11 @@ img {
 @media only screen and (min-width: 1024px) {
   .boton {
     width: max-content;
+  }
+
+  .boton-v2 { 
+    width: max-content;
+    padding: 0 37px;
   }
 }
 
@@ -1420,7 +1425,7 @@ img {
 
 @media only screen and (min-width: 1024px) {
   .container--large {
-    max-width: 1180px;
+    max-width: 1240px;
   }
 
   .seccionBanner__grid {
@@ -5015,7 +5020,7 @@ body .seccionEventos .slick-slide {
   font-size: var(--14);
   font-style: normal;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 20px;
   letter-spacing: 3.36px;
 }
 
@@ -5039,6 +5044,12 @@ p {
   .wrapper {
     max-width: 1240px;
     padding: 0 24px;
+  }
+
+  .subheading {
+    font-size: var(--14);
+    line-height: 16px;
+    letter-spacing: 3.36px;
   }
 }
 
@@ -5139,7 +5150,6 @@ p {
 }
 
 /* seccionBloqueTexto */
-
 .seccionBloqueTexto__bckg {
   background-color: rgb(170 204 255 / 30%);
   padding: 84px 0;
@@ -5213,7 +5223,7 @@ p {
   row-gap: 24px;
 }
 
-.seccionNumerada__elemento .number {
+.seccionNumerada__elemento .numero {
   color: var(--ACF);
   font-family: var(--ff-prompt);
   font-size: var(--46);
@@ -5238,7 +5248,7 @@ p {
   font-family: var(--ff-sans);
 }
 
-.seccionNumerada__elemento .number {
+.seccionNumerada__elemento .numero {
   position: relative;
   display: inline-block;
   padding-bottom: 21px;
@@ -5246,7 +5256,7 @@ p {
   font-weight: 300;
 }
 
-.seccionNumerada__elemento .number:before {
+.seccionNumerada__elemento .numero:before {
   content: "";
   display: block;
   position: absolute;
@@ -5415,11 +5425,11 @@ p {
   display: grid;
   row-gap: 18px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .seccionProfesionalesUrg__container {
-  max-width: 1176px;
+  max-width: 1230px;
   margin: 0 auto;
 }
 
@@ -5473,6 +5483,11 @@ p {
 @media only screen and (min-width: 1024px) {
   .seccionProfesionalesUrg__bckg {
     padding: 80px 60px;
+  }
+
+  .seccionProfesionalesUrg__title,
+  .seccionProfesionalesUrg__title .heading--48 { 
+    text-align: center;
   }
 }
 

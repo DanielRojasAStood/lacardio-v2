@@ -5,6 +5,17 @@
     $logo       = wp_get_attachment_image_src($logo_id, 'full');
 ?>
 
+<div class="customHeaderTop">
+	<div class="customHeaderTop__wrapper">
+	<div>
+	<a href="https://www.elempleo.com/co/sitio-empresarial/cardio-infantil" target="_blank" title="Trabaja con nosotros">Trabaja con nosotros</a>
+	<a href="https://www.lacardio.org/ley-de-transparencia/" target="_blank" title="Ley de transparencia">Ley de transparencia</a>
+	</div>
+	<div>
+		<a href="tel:601756 3426" target="_blank" title="Línea de atención">Línea de atención: (601) 756 3426</a>
+    </div>
+    </div>	
+</div>
 <header class="customHeader">
     <div class="customHeader__wrapper">
         <!-- logo -->
@@ -25,12 +36,8 @@
         <!-- Menu Escritorio -->
         <?php get_template_part('template-parts/page/header/content', 'header-mobile') ?>
         <!-- Fin Menu Escritorio -->
-        <div class="customHeader__logo contenedor-logo-fundacion">
-            <a href="https://fundacion.cardioinfantil.org/">									
-								    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/general/logo_50fundacion.jpg" alt="Fundación Cardioinfantil" style="max-width: 200px;">
-            </a>
-        </div>            
-        
-
+		<!-- Logo fundacion cardioinfantil -->
+        <?php get_template_part('template-parts/page/header/content', 'header-logo') ?>
+        <!-- Fin Logo fundacion cardioinfantil -->
     </div>
 </header>

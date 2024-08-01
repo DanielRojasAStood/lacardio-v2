@@ -4,6 +4,9 @@ function enqueue_scripts() {
     $cssFileURI = get_template_directory_uri() . '/assets/css/main-v2.css';
     wp_enqueue_style('main_css', $cssFileURI);
 	
+	$cssFileURI = get_template_directory_uri() . '/page-template-lg/page-revascularizacion.css';
+    wp_enqueue_style('revascularizacion_css', $cssFileURI);
+	
 	$cssFileURI = get_template_directory_uri() . '/assets/css/slick.css';
     wp_enqueue_style('slick_css', $cssFileURI);
 	
