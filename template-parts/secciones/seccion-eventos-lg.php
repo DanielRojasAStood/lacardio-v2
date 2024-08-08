@@ -43,7 +43,7 @@ $eventos_query = new WP_Query($args);
                         ?>
                         <div class="seccionEventos__semanas">
                             <p class="seccionEventos__dia heading--14"><?php echo $dia_semana_espanol; ?></p>
-                            <p class="seccionEventos__numero heading--64"><?php echo $numero_dia; ?></p>
+                            <h3 class="seccionEventos__numero heading--64"><?php echo $numero_dia; ?></h3>
                         </div>
                     <?php endwhile; ?>
                 </div>

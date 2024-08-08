@@ -917,7 +917,7 @@ body.is-active {
 
 .customFooter__wrapper {
   position: relative;
-  max-width: 1240px;
+  max-width: 1248px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -1007,7 +1007,7 @@ body.is-active {
 
 .customFooter__social-col ul {
   display: flex;
-  column-gap: 18px;
+  column-gap: 24px;
   margin: 0;
   padding: 0;
 }
@@ -1062,7 +1062,7 @@ body.is-active {
 
   .customFooter__grid {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 18px;
+    column-gap: 36px;
     padding-bottom: 48px;
   }
 
@@ -1425,7 +1425,7 @@ img {
 
 @media only screen and (min-width: 1024px) {
   .container--large {
-    max-width: 1240px;
+    max-width: 1246px;
   }
 
   .seccionBanner__grid {
@@ -2206,9 +2206,8 @@ input[type="text"] {
 
 .sectionNoticias__container {
   width: 100%;
-  max-width: 1190px;
+  max-width: 1239px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .seccionNoticias__fondo .heading--48 {
@@ -2401,7 +2400,7 @@ body .seccionNoticias .slick-track {
   }
 
   .seccionNoticias__articulo {
-    padding: 0 9px;
+    padding: 0 19px;
     height: 100%;
   }
 
@@ -3494,14 +3493,11 @@ body .seccionEventos .slick-slide {
   width: 100%;
 }
 
-.sectionServicioMedico__cta.heading--18 {
-  color: red;
-}
 
 @media only screen and (min-width: 1024px) {
   .sectionServiciosMedicos__grid {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    column-gap: 36px;
   }
 
   .sectionServicioMedico {
@@ -3585,10 +3581,11 @@ body .seccionEventos .slick-slide {
   margin: 0;
 }
 
-.seccionSomosLacardio__detalle {
+ul.seccionSomosLacardio__detalle {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: 18px;
+  row-gap: 19px;
+  width: 100%;
   margin: 0 0 30px !important;
   padding: 0 !important;
 }
@@ -3604,23 +3601,25 @@ body .seccionEventos .slick-slide {
   line-height: 20px;
   letter-spacing: 0.21px;
 }
-
+ul.seccionSomosLacardio__detalle .heading--48{
+  font-weight: 400
+}
 .seccionSomosLacardio__info .boton-v2--blanco-rojo {
   max-width: 100%;
 }
 
 @media only screen and (min-width: 1024px) {
   .seccionSomosLacardio {
-    padding: 80px 0 0;
+    padding: 0;
   }
 
   .seccionSomosLacardio__grid {
     display: grid;
-    grid-template-columns: 52% 46%;
-    column-gap: 26px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 36px;
   }
 
-  .seccionSomosLacardio__detalle {
+  ul.seccionSomosLacardio__detalle {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 24px;
     column-gap: 36px;
@@ -3644,7 +3643,8 @@ body .seccionEventos .slick-slide {
   }
 
   .seccionSomosLacardio__info .boton-v2--blanco-rojo {
-    max-width: max-content;
+    width: 270px;
+    padding: 0 28px;
   }
 }
 
@@ -3740,7 +3740,8 @@ body .seccionEventos .slick-slide {
   letter-spacing: 0.21px;
 }
 
-.seccionSedes__sede-info p {
+.seccionSedes__sede-info .heading--24,
+.seccionSedes__sede-info .heading--14 {
   color: var(--fff);
 }
 
@@ -3754,13 +3755,13 @@ body .seccionEventos .slick-slide {
   }
 
   .seccionSedes__grid {
-    grid-template-columns: 1fr 2fr;
-    column-gap: 30px;
+    grid-template-columns: 31.3% 66%;
+    column-gap: 36px;
   }
 
   .seccionSedes__sedes {
     grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
+    column-gap: 36px;
   }
 
   .seccionSedes__info .boton-v2 {
@@ -3864,7 +3865,7 @@ body .seccionEventos .slick-slide {
   }
 
   .seccionDonar__info {
-    padding: 70px 60px 48px 50px;
+    padding: 70px 97px 48px 54px;
   }
 
   .seccionDonar__img img {
@@ -3931,6 +3932,10 @@ body .seccionEventos .slick-slide {
 .seccionEventos__dias .slick-current .seccionEventos__dia,
 .seccionEventos__dias .slick-current .seccionEventos__numero {
   color: var(--E40046);
+}
+
+.seccionEventos__dias .slick-current .seccionEventos__numero {
+  font-weight: 200;
 }
 
 .seccionEventos__dias .slick-current .seccionEventos__numero:before {
@@ -4056,7 +4061,9 @@ body .seccionEventos .slick-slide {
 .seccionEventos .slick-prev {
   left: -40px;
 }
-
+.slickEventoInfo .slick-dots {
+  margin-top: 34px;
+}
 @media only screen and (min-width: 1024px) {
   .seccionEventos {
     margin: 80px 0 0;
@@ -4079,12 +4086,12 @@ body .seccionEventos .slick-slide {
   }
 
   .seccionEventos__titulo {
-    padding: 0 36px 60px;
+    padding: 0 0 60px;
   }
 
   .seccionEventos__grid {
     display: grid;
-    grid-template-columns: 49% 51%;
+    grid-template-columns: 51.7% 48.3%;
     padding: 0;
   }
 
@@ -4094,7 +4101,7 @@ body .seccionEventos .slick-slide {
   }
 
   .seccionEventos__info {
-    padding: 40px 36px 50px;
+    padding: 40px 0 0;
   }
 
   .seccionEvento__cta {
@@ -4133,10 +4140,6 @@ body .seccionEventos .slick-slide {
   margin: 0;
 }
 
-.seccionTargetas .heading--48 {
-  font-weight: 400;
-}
-
 .seccionTargetas .heading--24 {
   color: var(--002D72);
   font-weight: 500;
@@ -4149,7 +4152,6 @@ body .seccionEventos .slick-slide {
 .seccionTargetas__container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 24px;
 }
 
 .seccionTargetas__grid {
@@ -4162,6 +4164,7 @@ body .seccionEventos .slick-slide {
 
 .seccionTargeta {
   height: 100%;
+  padding: 0 19px;
   transition: box-shadow 0.3s ease-out, transform 0.3s ease-out,
     opacity 0.2s ease-out;
   transition-delay: 0.1s;
@@ -4245,12 +4248,6 @@ body .seccionEventos .slick-slide {
   width: calc(100% - 24px);
 }
 
-@media only screen and (min-width: 780px) {
-  .seccionTargetas .slick-track {
-    column-gap: 36px;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   .seccionTargetas__fondo {
     margin-top: 80px;
@@ -4262,7 +4259,7 @@ body .seccionEventos .slick-slide {
   }
 
   .seccionTargetas__container {
-    max-width: 1252px;
+    max-width: 1239px;
   }
 
   .seccionTargeta__contenido {
@@ -4663,7 +4660,7 @@ body .seccionEventos .slick-slide {
 
 .seccionTargetas .heading--48 {
   font-weight: 300;
-  text-align: left;
+  text-align: center;
 }
 
 .seccionInternaBlogBanner__fondo {

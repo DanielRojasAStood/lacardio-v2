@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Plantila Revascularizacion
+ * Template Name: Plantilla Revascularizacion
  * 
  * @package FCITheme
  * @subpackage Legger_Templates

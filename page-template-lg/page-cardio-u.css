@@ -1,0 +1,1752 @@
+/* body:before {
+  content: "Nuestro sitio web está actualmente en mantenimiento para mejorar su experiencia. Volveremos pronto. ¡Gracias por su paciencia!";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999;
+  padding: 40px;
+  font-size: 35px;
+  text-align: center;
+  color: var(--002D72);
+}
+
+@media only screen and (min-width: 1024px) {
+  body:before {
+    display: none;
+  }
+} */
+
+.heading--15{
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0.27px;
+}
+
+.heading--46 {
+  -webkit-text-stroke-width: 1px;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 49px;
+  letter-spacing: 0.69px;
+}
+
+/* seccionCardioUHeader */
+.seccionCardioUHeader li {
+  list-style: none;
+}
+
+.seccionCardioUHeader__grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 36px;
+  height: 86px;
+}
+
+.seccionCardioUHeader__grid a {
+  text-decoration: none;
+}
+
+.seccionCardioUHeader__logo {
+  width: 135px;
+}
+
+.seccionCardioUHeader__menu,
+.seccionCardioUHeader__menuacerca {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.seccionCardioUHeader__menu a:nth-child(1),
+.seccionCardioUHeader__menuacerca a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.seccionCardioUHeader__menuitems {
+  position: absolute;
+  top: 86px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background: rgb(103, 114, 131);
+  background: linear-gradient(
+    180deg,
+    rgb(103 114 131) -12%,
+    rgba(213, 219, 231, 13) 1%
+  );
+  z-index: 4;
+}
+
+.seccionCardioUHeader__grid a,
+.seccionCardioUHeader__grid p {
+  font-family: var(--ff-sans);
+}
+
+.seccionCardioUHeader__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 10px 24px 0 24px;
+}
+
+.seccionCardioUHeader__grid .nivel-0,
+.seccionCardioUHeader__menuacerca a {
+  position: relative;
+}
+
+.seccionCardioUHeader__grid .nivel-0:before,
+.seccionCardioUHeader__menuacerca a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 6px;
+  background-color: var(--E40046);
+  transition: width 0.4s ease;
+}
+
+.seccionCardioUHeader__grid .nivel-0 svg {
+  transform: rotate(90deg);
+}
+
+.seccionCardioUHeader__menu .nivel-0:hover,
+.seccionCardioUHeader__menuacerca a:hover {
+  color: var(--E40046);
+}
+
+.seccionCardioUHeader__menu:hover .nivel-0:before,
+.seccionCardioUHeader__menuacerca:hover a:before {
+  width: 100%;
+}
+
+.seccionCardioUHeader__menu:hover .seccionCardioUHeader__menuitems {
+  opacity: 1;
+  visibility: visible;
+}
+
+.seccionCardioUHeader__wrapper ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 401px;
+  width: 620px;
+  height: 100%;
+  padding: 37px 20px 0 33px;
+}
+
+.seccionCardioUHeader__wrapper .nivel-1 {
+  height: 72px;
+}
+
+.seccionCardioUHeader__wrapper .nivel-1:hover .submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.seccionCardioUHeader__wrapper li.nivel-1 {
+  width: 100%;
+  max-width: 376px;
+}
+
+.seccionCardioUHeader__wrapper li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgb(103 114 131 / 30%);
+}
+
+.seccionCardioUHeader__wrapper li:last-child a {
+  border: 0;
+}
+
+.seccionCardioUHeader__wrapper li a svg {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -12px;
+  z-index: -1;
+}
+
+.seccionCardioUHeader__wrapper li a svg path {
+  fill: var(--E40046);
+}
+
+.seccionCardioUHeader__wrapper .submenu {
+  row-gap: 18px;
+}
+
+.seccionCardioUHeader__wrapper .submenu a {
+  border: 0;
+}
+
+.seccionCardioUHeader__wrapper .submenu .boton-v2 {
+  width: fit-content;
+  height: 56px;
+  padding: 0 28px;
+  border: 1px solid var(--E40046);
+}
+
+.seccionCardioUHeader__menu,
+.seccionCardioUHeader__menuacerca,
+.seccionCardioUHeader__cta a{
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUHeader__grid {
+    display: grid;
+    grid-template-columns: auto auto 2fr 3fr auto;
+    column-gap: 36px;
+    height: 86px;
+  }
+
+  .seccionCardioUHeader__logo {
+    width: auto;
+  }
+
+  .seccionCardioUHeader__menu,
+  .seccionCardioUHeader__menuacerca,
+  .seccionCardioUHeader__cta a {
+    display: flex;
+  }
+}
+
+/* seccionCardioUBannerPrincipal */
+.seccionCardioUBannerPrincipal__fondo {
+  padding: 20px 0 40px;
+  background-color: var(--0C2448);
+}
+
+.seccionCardioUBannerPrincipal__grid {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 10px;
+}
+
+.seccionCardioUBannerPrincipal__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 12px;
+}
+
+.seccionCardioUBannerPrincipal__info .heading--64 {
+  font-weight: 400;
+}
+
+.seccionCardioUBannerPrincipal__info .boton-v2 {
+  margin-top: 22px;
+}
+
+.seccionCardioUBannerPrincipal__img img {
+  transition: transform 0.4s ease;
+  transform: translateY(20px);
+  margin: 0 auto;
+}
+
+.slick-active .seccionCardioUBannerPrincipal__img img {
+  transform: translateY(0);
+}
+
+.seccionCardioUBannerPrincipal__bullet {
+  display: flex;
+  column-gap: 8px;
+  padding: 22px 0 0;
+}
+
+.seccionCardioUBannerPrincipal__bullet span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(228 0 70 / 30%);
+}
+
+.seccionCardioUBannerPrincipal__bullet span.active {
+  width: 30px;
+  border-radius: 8px;
+  background-color: var(--E40046);
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUBannerPrincipal__grid {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+  }
+
+  .seccionCardioUBannerPrincipal__fondo {
+    padding: 50px 52px;
+  }
+
+  .seccionCardioUBannerPrincipal__info {
+    row-gap: 18px;
+  }
+
+  .seccionCardioUBannerPrincipal__img {
+    padding: 0 40px 0 75px;
+  }
+}
+
+/* seccionCardioUOfertas */
+.seccionCardioUOfertas {
+  padding: 40px 0;
+}
+
+.seccionCardioUOfertas__grid {
+  display: none
+}
+
+.seccionCardioUOfertas__titulo {
+  display: grid;
+  row-gap: 12px;
+}
+
+.seccionCardioUOfertas__titulo .heading--48 {
+  text-align: left;
+  font-weight: 400;
+}
+
+.seccionCardioUOfertas__titulo .heading--36 {
+  font-weight: 500;
+  line-height: 46px;
+  text-transform: none;
+}
+
+.seccionCardioUOfertas .tab-links {
+  margin: 0;
+  padding: 0;
+}
+
+.seccionCardioUOfertas .tab-links a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  padding: 36px 80px 36px 0;
+  border-bottom: 1px solid var(--FFABC4);
+  cursor: pointer;
+}
+
+.seccionCardioUOfertas__titulo {
+  padding: 0 0 10px;
+}
+
+.tab-contenido .seccionCardioUOfertas__titulo {
+  padding: 40px 0;
+}
+
+.seccionCardioUOfertas .tab-links a img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  transform: translate(0px, -50%);
+}
+
+.seccionCardioUOfertas .tab-links a:hover {
+  color: var(--E40046);
+}
+
+.seccionCardioUOfertas .tab-links a:hover img,
+.seccionCardioUOfertas .active a img {
+  opacity: 1;
+  visibility: visible;
+}
+
+.seccionCardioUOfertas .active a {
+  border-bottom: 2px solid var(--E40046);
+}
+
+.seccionCardioUOfertas .tab-links li {
+  list-style: none;
+}
+
+.seccionCardioUOfertas .tab {
+  display: none;
+}
+
+.seccionCardioUOfertas .tab.active {
+  display: block;
+}
+
+.seccionCardioUOfertas .seccionCardioUCurso__info {
+  row-gap: 12px;
+}
+
+.seccionCardioUOfertas__articulos {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.seccionCardioUOfertasMobile .seccionCardioUPreguntasAccordion__tab{
+  padding: 0 0 30px;
+}
+
+.slickCardioUOfertasMobile .slick-track {
+  padding-bottom: 30px;
+}
+
+.slickCardioUOfertasMobile .slick-slide {
+  padding: 0 9px;
+}
+
+.seccionCardioUOfertasMobile .seccionCardioUPreguntasAccordion__title {
+  padding: 6px 24px 24px 24px;
+}
+
+.seccionCardioUOfertasMobile .heading--24{
+  color: var(--E40046);
+}
+
+.seccionCardioUOfertasMobile .seccionCardioUOfertas__titulo {
+  padding: 24px;
+}
+
+.seccionCardioUOfertasMobile .seccionCardioUPreguntasAccordion__item {
+  border-bottom: 1px solid var(--E40046);
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .seccionCardioUOfertas {
+    padding: 60px 0 80px;
+  }
+
+  .seccionCardioUOfertas__grid {
+    display: grid;
+    grid-template-columns: 31% 66%;
+    column-gap: 36px;
+  }
+
+  .seccionCardioUOfertasMobile {
+    display: none;
+  }
+
+  .seccionCardioUOfertas__articulos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+/* breadcrumbsCardioU */
+.breadcrumbsCardioU {
+  padding: 22px 0 0;
+}
+
+.breadcrumbsCardioU a,
+.breadcrumbsCardioU span {
+  font-family: var(--ff-sans);
+  color: var(--263956);
+  font-size: var(--12);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.06px;
+  text-decoration: none;
+}
+
+.breadcrumbsCardioU .breadcrumb_last {
+  font-weight: 600;
+}
+
+.page-template-page-cardio-u-nosotros .breadcrumbsCardioU,
+.page-template-page-cardio-u-escuelas .breadcrumbsCardioU {
+  background-color: #0c2548;
+}
+
+.page-template-page-cardio-u-nosotros .breadcrumbsCardioU a,
+.page-template-page-cardio-u-nosotros .breadcrumbsCardioU span,
+.page-template-page-cardio-u-escuelas .breadcrumbsCardioU a,
+.page-template-page-cardio-u-escuelas .breadcrumbsCardioU span {
+  color: var(--fff);
+}
+
+/* seccionCardioUCursos */
+.seccionCardioUCursos__fondo {
+  padding: 40px 0;
+}
+
+/* TODO */
+.page-template-page-cardio-u .seccionCardioUCursos__fondo {
+  background-color: rgba(170, 204, 255, 0.15) !important;
+}
+
+/* TODO */
+.page-template-page-cardio-u .seccionCardioUCursos__titulo {
+  text-align: left;
+}
+
+.seccionCardioUCursos__titulo .texto-izq {
+  text-align: left !important;
+}
+
+.seccionCardioUCursos__fondo .wrapper {
+  padding: 0 24px;
+}
+
+.seccionCardioUCursos__wrapper {
+  width: 100%;
+  max-width: 1239px;
+  margin: 0 auto;
+}
+
+.seccionCardioUCursos__titulo {
+  display: grid;
+  row-gap: 12px;
+  padding: 0 0 42px;
+  text-align: left;
+}
+
+.seccionCardioUCursos__titulo .heading--48 {
+  text-align: left;
+  font-weight: 400;
+}
+
+.seccionCardioUCursos .slick-track,
+.seccionCardioUInterna__docente .slick-track {
+  padding-bottom: 20px;
+}
+
+.seccionCardioUCursos .slick-slide,
+.seccionCardioUInterna__docente .slick-slide {
+  padding: 0 9px;
+}
+
+@media only screen and (min-width: 480px) {
+  .seccionCardioUCursos__fondo {
+    padding: 40px 15px;
+  }
+
+  .seccionCardioUCursos__fondo .wrapper {
+    padding: 0 9px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUCursos__fondo {
+    padding: 80px 52px;
+  }
+
+  .seccionCardioUCursos__fondo .wrapper { 
+    padding: 0 24px; 
+  }
+
+  .seccionCardioUCursos__titulo .heading--48 {
+    text-align: center;
+  }
+  
+  .seccionCardioUCursos .slick-slide,
+  .seccionCardioUInterna__docente .slick-slide {
+    padding: 0 17px;
+  }
+
+  .seccionCardioUCursos__titulo {
+    text-align: center;
+  }
+}
+
+.seccionCardioUCurso {
+  border-radius: 6px;
+  box-shadow: 0px 4px 14px 0px rgba(103, 114, 131, 0.15);
+  text-decoration: none;
+  background: var(--fff);
+}
+
+.seccionCardioUCurso:hover .seccionCardioUCurso__img img {
+  transform: scale(1.1);
+}
+
+.seccionCardioUCurso a {
+  text-decoration: none;
+}
+
+.seccionCardioUCurso__img {
+  height: 170px;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+}
+
+.seccionCardioUCurso__img img {
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.seccionCardioUCurso__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 18px 18px 26px;
+}
+
+.seccionCardioUCurso__info .heading--18 {
+  font-family: var(--ff-sans);
+  letter-spacing: normal;
+  font-weight: 700;
+}
+
+.seccionCardioUCurso__info .heading--14 {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  font-family: var(--ff-sans);
+  letter-spacing: 0.21px;
+}
+
+.seccionCardioUCurso__info span {
+  font-family: var(--ff-sans);
+  font-size: var(--18);
+  line-height: 24px;
+  color: var(--E40046);
+}
+
+.seccionCardioUCurso:hover .hover--rojo:before {
+  width: 100%;
+}
+
+/* seccionCardioUImgTituloCta */
+.seccionCardioUImgTituloCta {
+  padding: 40px 0;
+}
+
+.seccionCardioUImgTituloCta__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+}
+
+.seccionCardioUImgTituloCta__img {
+  display: grid;
+  place-content: center;
+  padding: 0;
+}
+
+.seccionCardioUImgTituloCta__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+.seccionCardioUImgTituloCta__info .heading--48 {
+  text-align: left;
+}
+
+.seccionCardioUImgTituloCta__info .heading--18 {
+  font-family: var(--ff-sans);
+}
+
+.seccionCardioUImgTituloCta__icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 32px;
+  margin-bottom: 12px;
+}
+
+.seccionCardioUImgTituloCta__icono .heading--14 {
+  font-family: var(--ff-sans);
+  letter-spacing: 0.21px;
+}
+
+.seccionCardioUImgTituloCta__info .boton-v2 {
+  min-width: 196px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUImgTituloCta {
+    padding: 80px 0;
+  }
+
+  .seccionCardioUImgTituloCta__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 36px;
+  }
+
+  .seccionCardioUImgTituloCta__info .heading--48,
+  .seccionCardioUImgTituloCta__info .heading--18 {
+    margin-bottom: 12px;
+  }
+
+  .seccionCardioUImgTituloCta__img {
+    padding: 0 68px 0 0;
+  }
+
+  .seccionCardioUImgTituloCta__icono {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 32px;
+    margin-bottom: 12px;
+  }
+}
+
+/* seccionCardioUTituloCtaImg */
+.seccionCardioUTituloCtaImg2 {
+  margin-bottom: 88px;
+}
+
+.seccionCardioUTituloCtaImg__grid {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.seccionCardioUTituloCtaImg__fondo {
+  position: relative;
+  padding: 30px 24px 40px;
+  border-radius: 0 0 60px 0;
+}
+
+.seccionCardioUTituloCtaImg__info {
+  display: grid;
+  row-gap: 18px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.seccionCardioUTituloCtaImg2 .seccionCardioUTituloCtaImg__info {
+  padding: 0;
+}
+
+.seccionCardioUTituloCtaImg__info .heading--48 {
+  text-align: left;
+}
+
+.seccionCardioUTituloCtaImg__info .subheading {
+  margin-bottom: 6px;
+}
+
+.seccionCardioUTituloCtaImg__info .boton-v2 {
+  margin-top: 22px;
+}
+
+.seccionCardioUTituloCtaImg__imagen {
+  position: relative;
+  padding: 0;
+  border-radius: 60px 0 0;
+  overflow: hidden;
+}
+
+.seccionCardioUTituloCtaImg__imagen img {
+  position: relative;
+  width: 100%;
+  height: auto
+}
+
+.seccionCardioUTituloCtaImg__fecha {
+  display: flex;
+  column-gap: 18px;
+  align-items: center;
+  padding-top: 18px;
+}
+
+.seccionCardioUTituloCtaImg__fecha .heading--14 {
+  font-family: var(--ff-sans);
+  font-weight: 700;
+  letter-spacing: 0.21px;
+  margin-bottom: 6px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUTituloCtaImg__fondo {
+    padding: 80px 0 80px 24px;
+    border-radius: 0;
+  }
+
+  .seccionCardioUTituloCtaImg__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seccionCardioUTituloCtaImg__fondo:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -83px;
+    width: 83px;
+    height: 100%;
+    border-radius: 0px 0px 60px 0px;
+    background-color: var(--002D72);
+    z-index: 1;
+  }
+
+  .seccionCardioUTituloCtaImg__imagen {
+    padding: 0 0 0 83px;
+    border-radius: 0px 60px 0px 0px;
+  }
+
+  .seccionCardioUTituloCtaImg__imagen img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .seccionCardioUTituloCtaImg__info {
+    row-gap: 12px;
+    max-width: 600px;
+    margin: 0 0 0 auto;
+    padding: 0 83px 0 0;
+  }
+
+  .seccionCardioUTituloCtaImg__info .boton-v2 {
+    min-width: 224px;
+    margin-top: 36px;
+  }
+}
+
+/* seccionCardioUTestimonios */
+.seccionCardioUTestimonios {
+  padding: 40px 0;
+}
+
+.seccionCardioUTestimonios__titulo {
+  display: grid;
+  row-gap: 12px;
+  padding: 0 0 30px;
+  text-align: center;
+}
+
+.seccionCardioUTestimonios__titulo .heading--48 {
+  font-weight: 400;
+}
+
+.seccionCardioUTestimonios__wrapper {
+  width: 100%;
+  max-width: 1239px;
+  margin: 0 auto;
+}
+
+.seccionCardioUTestimonio {
+  padding: 0 9px;
+  text-align: center;
+}
+
+.seccionCardioUTestimonio img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 12px;
+  border-radius: 100px;
+}
+
+.seccionCardioUTestimonio .heading--24 {
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.seccionCardioUTestimonio .heading--18 {
+  font-family: var(--ff-sans);
+}
+
+.slickCardioUTestimonio .slick-dots {
+  margin: 40px 0 0;
+}
+
+.slickCardioUTestimonio .slick-prev,
+.slickCardioUCursos .slick-prev,
+.seccionCardioUInterna__docente .slick-prev {
+  left: -50px;
+}
+
+.slickCardioUBannerPrincipal .slick-prev {
+  left: -73px;
+}
+
+.slickCardioUTestimonio .slick-next,
+.slickCardioUCursos .slick-next,
+.seccionCardioUInterna__docente .slick-next {
+  right: -50px;
+}
+
+.slickCardioUBannerPrincipal .slick-next {
+  right: -73px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUTestimonios {
+    padding: 80px 52px;
+  }
+
+  .seccionCardioUTestimonio {
+    padding: 0 19px;
+  }
+}
+
+/* seccionCardioUPreguntasAccordion */
+.seccionCardioUPreguntas__titulo {
+  display: grid;
+  padding: 0 0 22px;
+  row-gap: 12px;
+  text-align: center;
+}
+
+.seccionCardioUPreguntas__titulo .heading--48 {
+  font-weight: 400;
+}
+
+.seccionCardioUPreguntas__fondo {
+  padding: 40px 0;
+}
+
+.seccionCardioUPreguntasAccordion__item {
+  padding: 18px 0 0;
+  border-bottom: 1px solid var(--002D72);
+}
+
+.seccionCardioUPreguntasAccordion__item button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0 18px;
+  text-align: left;
+  border: 0;
+  background-color: transparent;
+}
+
+.seccionCardioUPreguntasAccordion__title .heading--24 {
+  font-weight: 500;
+  padding-right: 10px
+}
+
+.seccionCardioUPreguntasAccordion__title.active svg {
+  transform: rotate(180deg);
+}
+
+.seccionCardioUPreguntasAccordion__title svg path {
+  fill: var(--e40046);
+}
+
+.seccionCardioUPreguntasAccordion__tab {
+  display: none;
+  padding: 0 18px 18px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUPreguntas__titulo {
+    padding: 0 0 42px;
+  }
+
+  .seccionCardioUPreguntas__fondo {
+    padding: 80px 0;
+  }
+
+  .seccionCardioUPreguntasAccordion {
+    padding: 0 100px;
+  }
+}
+
+/* seccionCardioUCta */
+.seccionCardioUCta {
+  padding: 40px 0;
+}
+
+.seccionCardioUCta__titulo {
+  display: grid;
+  row-gap: 12px;
+}
+
+.seccionCardioUCta__titulo .heading--48 {
+  text-align: left;
+  font-weight: 400;
+}
+
+.seccionCardioUCta__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 24px;
+  padding: 42px 0 0;
+}
+
+.seccionCardioUCta__grid a {
+  display: grid;
+  row-gap: 28px;
+  padding: 28px 30px;
+  border-radius: 6px;
+  border: 1px solid var(--D5DBE7);
+  text-decoration: none;
+  background-color: var(--fff);
+
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out,
+    opacity 0.2s ease-out;
+  transition-delay: 0.1s;
+  transform: translateZ(0);
+}
+
+.seccionCardioUCta__grid a:hover {
+  border: 1px solid var(--E40046);
+  box-shadow: 0px 4px 24px 0px rgba(103, 114, 131, 0.15);
+  transform: translate(0, -4px);
+}
+
+.seccionCardioUCta__grid a:hover .hover:before {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUCta {
+    padding: 80px 0 100px;
+  }
+
+  .seccionCardioUCta__grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 36px;
+    padding: 42px 0 0;
+  }
+
+  .seccionCardioUCta__grid a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* seccionCardioUNosotrosBanner */
+.seccionCardioUNosotrosBanner__fondo {
+  padding: 20px 0 70px;
+}
+
+.seccionCardioUNosotrosBanner__grid {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 12px;
+}
+
+.seccionCardioUNosotrosBanner__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 18px;
+  padding: 0 24px 0 0;
+}
+
+.seccionCardioUNosotrosBanner__info .heading--64 {
+  font-weight: 400;
+}
+
+.seccionCardioUNosotrosBanner__imagen {
+  text-align: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUNosotrosBanner__fondo {
+    padding: 0;
+  }
+
+  .seccionCardioUNosotrosBanner__grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+/* seccionCardioUTituloItemsImg */
+.seccionCardioUTituloItemsImg {
+  padding: 40px 0;
+}
+
+.seccionCardioUTituloItemsImg__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.seccionCardioUTituloItemsImg_info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  padding: 0;
+}
+
+.seccionCardioUTituloItemsImg_info .heading--48 {
+  text-align: left;
+}
+
+.seccionCardioUTituloItemsImg_info .heading--18 {
+  font-family: var(--ff-sans);
+  font-size: var(--18);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.27px;
+}
+
+.seccionCardioUTituloItemsImg_info .heading--18 p {
+  margin-bottom: 20px;
+}
+
+.seccionCardioUTituloItemsImg__programas {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.seccionCardioUTituloItemsImg__programas li {
+  display: grid;
+  grid-template-columns: 67px 1fr;
+  column-gap: 18px;
+  list-style: none;
+}
+
+.seccionCardioUTituloItemsImg__programas .heading--24 {
+  padding: 8px 0 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.seccionCardioUTituloItemsImg__img {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUTituloItemsImg__grid {
+    grid-template-columns: 4fr 3fr;
+  }
+
+  .seccionCardioUTituloItemsImg {
+    padding: 60px 0;
+  }
+
+  .seccionCardioUTituloItemsImg_info .heading--48 {
+    margin-bottom: 12px;
+  }
+
+  .seccionCardioUTituloItemsImg__programas {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+
+  .seccionCardioUTituloItemsImg_info {
+    padding: 0 66px 0 0;
+  }
+
+  .seccionCardioUTituloItemsImg__programas li {
+    column-gap: 28px;
+  }
+}
+
+/* seccionCardioUTituloItems */
+.seccionCardioUTituloItems__fondo {
+  padding: 40px 0;
+}
+
+.seccionCardioUTituloItems__titulo {
+  display: grid;
+  row-gap: 30px;
+  text-align: center;
+}
+
+.seccionCardioUTituloItems__titulo .heading--48 {
+  text-align: left;
+}
+
+.seccionCardioUTituloItems__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin: 0;
+  padding: 40px 0 0;
+}
+
+.seccionCardioUTituloItems__items li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  list-style: none;
+}
+
+.seccionCardioUTituloItems__items .numero {
+  display: inline-block;
+  width: fit-content;
+  padding-bottom: 18px;
+  color: #ffabc4;
+  border-bottom: 1px solid #ffabc4;
+}
+
+.seccionCardioUTituloItems__items .heading--24 {
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUTituloItems__fondo {
+    padding: 60px 0 100px;
+  }
+
+  .seccionCardioUTituloItems__titulo .heading--48 {
+    text-align: center;
+  }
+
+  .seccionCardioUTituloItems__items {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 60px 0 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .seccionCardioUTituloItems__items {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 36px;
+  }
+}
+
+/* seccionCardioUFooter */
+.seccionCardioUFooter__fondo {
+  padding: 42px 0 0;
+  border-radius: 0px 60px 0px 0px;
+  background: var(--0C2448);
+}
+
+.seccionCardioUFooter__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+.seccionCardioUFooter__logo {
+  text-align: center
+}
+
+.seccionCardioUFooter__menu ul {
+  display: grid;
+  row-gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.seccionCardioUFooter__menu li {
+  list-style: none;
+}
+
+.seccionCardioUFooter__menu li a {
+  color: var(--fff);
+  letter-spacing: 0.21px;
+  text-decoration: none;
+}
+
+.seccionCardioUFooter__copy {
+  display: grid;
+  row-gap: 20px;
+  padding: 50px 0;
+}
+
+.seccionCardioUFooter__copy ul {
+  display: flex;
+  column-gap: 23px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.seccionCardioUFooter__copy li {
+  list-style: none;
+}
+
+.seccionCardioUFooter__copy p {
+  font-family: var(--ff-sans);
+  text-align: center
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-top: 1px solid #ddd;
+}
+
+.accordion-item:first-child {
+  border-top: none;
+}
+
+.accordion-header {
+  background-color: #f7f7f7;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  background-color: #e2e2e2;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+.accordion-header .icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active .icon {
+  transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUFooter__grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    column-gap: 30px;
+    padding-bottom: 40px;
+  }
+
+  .seccionCardioUFooter__menu ul {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  .seccionCardioUFooter__copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  .seccionCardioUFooter__copy ul {
+    margin: 0;
+  }
+
+  .seccionCardioUFooter__copy p {
+    text-align: left;
+  }
+}
+
+/* seccionCardioUBannerTexto */
+.seccionCardioUBannerTexto__fondo {
+  padding: 20px 0 30px;
+}
+
+.seccionCardioUBannerTexto__grid {
+  display: flex;
+  row-gap: 12px;
+  flex-direction: column-reverse;
+}
+
+.seccionCardioUBannerTexto__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 18px;
+}
+
+.seccionCardioUBannerTexto__info .heading--64 {
+  text-align: left;
+  font-weight: 400;
+}
+
+.seccionCardioUBannerTexto__img {
+  margin: 0 auto;
+  padding: 0 67px 0 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUBannerTexto__fondo {
+    padding: 0 0 30px;
+  }
+
+  .seccionCardioUBannerTexto__grid {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+  }
+
+  .seccionCardioUBannerTexto__img {
+    width: 328px;
+    margin: 0 0 0 auto;
+    padding: 0 67px 0 0;
+  }
+}
+
+/* seccionCardioUCursosGrid */
+.seccionCardioUCursosGrid {
+  padding: 40px 0;
+}
+
+.seccionCardioUCursosGrid__titulo {
+  display: grid;
+  row-gap: 12px;
+  padding: 0 0 40px;
+}
+
+.seccionCardioUCursosGrid__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
+.seccionCardioUCursosGrid__titulo .heading--48 {
+  text-align: left;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 680px) {
+  .seccionCardioUCursosGrid__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUCursosGrid {
+    padding: 80px 0;
+  }
+
+  .seccionCardioUCursosGrid__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .seccionCardioUCursosGrid__grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 36px;
+    row-gap: 42px;
+  }
+}
+
+/* seccionCardioUTargetasGrandes */
+.seccionCardioUTargetasGrandes__fondo {
+  padding: 40px 0;
+}
+
+.seccionCardioUTargetasGrandes__titulo {
+  display: grid;
+  row-gap: 18px;
+  padding-bottom: 30px;
+}
+
+.seccionCardioUTargetasGrandes__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  padding: 0;
+}
+
+.seccionCardioUTargetasGrandes__items li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  list-style: none;
+}
+
+.seccionCardioUTargetasGrandes__img {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.seccionCardioUTargetasGrandes__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding: 0 30px;
+}
+
+.seccionCardioUTargetasGrandes__info .heading--24 {
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1200px) {
+  .seccionCardioUTargetasGrandes__fondo {
+    padding: 80px 0;
+  }
+
+  .seccionCardioUTargetasGrandes__items {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 36px;
+  }
+}
+
+/* seccionCardioUInternaCurso */
+.seccionCardioUInternaCurso {
+  padding: 40px 0 0;
+}
+
+.seccionCardioUInternaCurso .seccionCardioUTituloCtaImg {
+  margin-top: 60px;
+}
+
+.seccionCardioUInternaCurso .seccionCardioUTituloCtaImg__info{
+  padding: 0 0 0;
+}
+
+.seccionCardioUInternaCurso__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 50px;
+}
+
+.seccionCardioUInternaCurso__titulo{
+  display: grid;
+  row-gap: 12px;
+  padding-bottom: 40px;
+}
+
+.seccionCardioUInternaCurso__titulo .heading--48 {
+  font-weight: 400;
+}
+
+.seccionCardioUInternaCurso__img img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.seccionCardioUInternaCurso__img-info {
+  display: grid;
+  padding: 28px;
+  row-gap: 20px;
+  background: rgb(213 219 231 / 30%);
+}
+
+.seccionCardioUInternaCurso__img-info .informacion {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.seccionCardioUInternaCurso__img-info .informacion:last-child {
+  border: 0;
+}
+
+.seccionCardioUInternaCurso__img-info .informacion div {
+  display: grid;
+  row-gap: 6px;
+}
+
+.seccionCardioUInternaCurso__img-info .heading--14 {
+  letter-spacing: 0.21px;
+  font-weight: 700
+}
+
+.seccionCardioUInternaCurso__img-info path {
+  color: var(--677283);
+}
+
+.seccionCardioUInternaCurso__detalle {
+  display: grid;
+  row-gap: 18px;
+  margin-top: 40px;
+}
+
+.seccionCardioUInternaCurso__detalle .heading--36 {
+  text-transform: math-auto;
+  font-weight: 500;
+  text-align: left;
+}
+
+.seccionCardioUInternaCurso__detalle ul {
+  font-family: var(--ff-sans);
+  margin: 0;
+  padding: 0 0 0 30px;
+  color: var(--263956);
+  font-size: var(--18);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.27px;
+}
+
+.seccionCardioUInternaCurso__detalle ul li {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUInternaCurso__grid {
+    grid-template-columns: 1fr 31%;
+    column-gap: 36px;
+    margin-bottom: 100px;
+  }
+
+  .seccionCardioUInternaCurso__titulo{
+    row-gap: 18px;
+  }
+
+  .seccionCardioUInternaCurso__img-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px;
+    column-gap: 10px;
+  }
+
+  .seccionCardioUInternaCurso__img-info .informacion {
+    padding-right: 18px;
+    border-right: 1px solid var(--D5DBE7);
+  }
+
+  .seccionCardioUInternaCurso__detalle {
+    row-gap: 24px;
+    margin-top: 66px;
+  }
+}
+
+/* seccionCardioUInternaFlotante */
+
+.seccionCardioUInterna__flotante {
+  position: relative;
+  margin: 40px 0 0;
+  padding: 36px 24px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 24px 0px rgba(103, 114, 131, 0.15);
+}
+
+.seccionCardioUInterna__flotante:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 160px;
+  height: 6px;
+  margin-left: -80px;
+  background-color: var(--FFABC4);
+}
+
+.seccionCardioUInterna__flotante .heading--24 {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.seccionCardioUInterna__flotante .info {
+  font-family: var(--ff-sans);
+  padding: 8px 0;
+  letter-spacing: 0.21px;
+}
+
+.seccionCardioUInterna__flotante .info span {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.seccionCardioUInterna__flotante-precio {
+  padding-top: 24px;
+}
+
+.seccionCardioUInterna__flotante-precio .heading--14{
+  font-family: var(--ff-sans);
+  margin-bottom: 6px;
+  letter-spacing: 0.21px;
+}
+
+.seccionCardioUInterna__flotante-precio .heading--36 {
+  font-family: var(--ff-sans);
+  font-weight: 400;
+  margin-bottom: 30px;
+  letter-spacing: normal;
+}
+
+.seccionCardioUInterna__flotante-precio .boton-v2 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUInterna__flotante {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    margin: 0;
+    padding: 36px 24px 30px;
+  }
+}
+
+/* seccionCardioUInterna__docente */
+.seccionCardioUInterna__docente-fondo {
+  padding: 40px 0;
+  background-color: rgba(170, 204, 255, 15%);
+}
+
+.seccionCardioUInterna__docente-fondo .wrapper {
+  padding: 0 24px;
+}
+
+.seccionCardioUInterna__docente-titulo {
+  padding-bottom: 40px;
+}
+
+.seccionCardioUInterna__docente .heading--36{
+  text-align: left;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.seccionCardioUInterna__docente-wrapper {
+  width: 100%;
+  max-width: 1239px;
+  margin: 0 auto;
+}
+
+.seccionCardioUInterna__item-info {
+  display: grid;
+  row-gap: 12px;
+  padding-top: 12px;
+}
+
+.seccionCardioUInterna__item .heading--24{
+  font-weight: 500;
+}
+
+.seccionCardioUInterna__item .heading--18 {
+  font-family: var(--ff-sans);
+}
+
+@media only screen and (min-width: 480px) {
+  .seccionCardioUInterna__docente-fondo {
+    padding: 40px 15px;
+  }
+
+  .seccionCardioUInterna__docente-fondo .wrapper {
+    padding: 0 9px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccionCardioUInterna__docente-fondo {
+    padding: 80px 52px;
+  }
+
+  .seccionCardioUInterna__docente-fondo .wrapper{
+    padding: 0 24px;
+  }
+}

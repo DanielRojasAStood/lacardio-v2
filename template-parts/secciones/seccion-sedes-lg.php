@@ -27,7 +27,7 @@ if ($grupo_sedes) {
                 <?php endif; ?>
 
                 <?php if ($descripcion): ?>
-                    <h2 class="font-sans heading--18"><?php echo $descripcion; ?></h2>
+                    <p class="font-sans heading--18"><?php echo $descripcion; ?></p>
                 <?php endif; ?>
 
                 <?php if ($cta_titulo && $cta_url): ?>
@@ -52,10 +52,11 @@ if ($grupo_sedes) {
                         </div>
                         <div class="seccionSedes__sede-info">
                             <?php if ($nombre): ?>
-                                <p class="heading--24"><?php echo $nombre; ?></p>
-                            <?php endif; ?>
-                            <?php if ($ubicacion): ?>
-                                <p class="heading--24"><?php echo $ubicacion; ?></p>
+                                <h3 class="heading--24">
+                                    <?php echo $nombre; ?>
+                                    <br>
+                                    <?php echo $ubicacion; ?>
+                                </h3>
                             <?php endif; ?>
                             <?php if ($ciudad): ?>
                                 <p class="heading--14"><?php echo $ciudad; ?></p>
